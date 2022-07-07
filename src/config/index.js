@@ -10,7 +10,9 @@ const httpCode = {
     UNAUTHORIZED: 401,
     ADMIN_REQUIRE: 406
 }
+const SECRET_KEY="12321312jj21h3j12"
 module.exports = {
     DB_URL,
-    httpCode
+    httpCode,
+    SECRET_KEY
 }
