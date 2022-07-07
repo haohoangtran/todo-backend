@@ -16,7 +16,10 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.statics.validate = function (obj) {
-    const { error, value } = userJoi.validate(obj);
+    const { error, value } = userJoi.validate(obj, {
+        allowUnknown: true,
+        stripUnknown: true
+    });
     return { error, value }
 }
 
